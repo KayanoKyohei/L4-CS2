@@ -13,12 +13,12 @@ class TopController < ApplicationController
       session[:login_uid] = params[:uid]
       redirect_to top_main_path
     else
-      render　"errorです"
+      render "error"
     end
   end
   
   def logout
-    session.delete[:login_uid]
+    session.delete(:login_uid)
     redirect_to top_main_path
   end
 end
